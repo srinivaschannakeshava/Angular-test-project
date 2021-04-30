@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="card text-center">
+    <div class="card-header">
+      {{movie.name}}
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="card my-2" style="width: auto">
+            <img class="card-img-top" src="{{movie.imageUrl}}" alt="Card image cap" style="cursor: pointer;" title="{{movie.name}}" [routerLink]="['/movie',movie.id]" >
+            <div class="card-body">
+              <h5 class="card-title text-truncate" style="cursor: pointer;" data-toggle="tooltip" data-placement="top" title="{{movie.name}}">{{movie.name}}</h5>
+              <!-- <p class="card-text">{{movie.description}}</p> -->
+              <a [routerLink]="['/movie',movie.id]" class="btn btn-primary mt-1">Watch Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Movie : </td>
+                <td>{{movie.name}}</td>
+              </tr>
+              <tr>
+                <td>Description : </td>
+                <td>{{movie.description}}</td>
+              </tr>
+              <tr>
+                <td>Rating : </td>
+                <td>{{movie.rating}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+</div>

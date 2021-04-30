@@ -1,0 +1,18 @@
+<div class="container mt-2">
+  <div class="row shadow-lg p-3 mb-5 bg-white rounded">
+    <div *ngFor='let movie of movies' class="col-md-3">
+      <app-movie-thumnail [movie]='movie'></app-movie-thumnail>
+    </div>
+  </div>
+  <hr>
+  <em><kbd>Recommendation</kbd></em>
+
+  <div class="container shadow-lg p-3 mb-5 bg-white rounded" style="overflow-x: auto;">
+    <div class="row flex-row flex-nowrap">
+      <div *ngFor='let movie of movies' class="col-md-3">
+        <app-movie-thumnail [movie]='movie'></app-movie-thumnail>
+      </div>
+    </div>
+  </div>
+
+</div>
